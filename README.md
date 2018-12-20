@@ -1,4 +1,6 @@
-# poeditor-sync
+# poeditor-bitbucket-sync
+
+This piece of code allows you to get po files from poeditor and then commit them to a git repository (bitbucket in our case).
 
 Build the image
 ```
