@@ -1,0 +1,15 @@
+sudo: required
+
+language: generic
+
+services:
+  - docker
+
+before_install:
+  - docker build -t pathmotion/poeditor-bitbucket-sync .
+
+deploy:
+  provider: script
+  script: bash docker_push.sh
+  on:
+    branch: master
