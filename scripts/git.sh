@@ -13,7 +13,7 @@ git init
 git config --global user.email "$GIT_USER_EMAIL"
 git config --global user.name "$GIT_USER_NAME"
 git remote add origin $GIT_URL
-git clone $GIT_URL $PROJECT_PATH
+git clone --depth 50 --single-branch --branch develop $GIT_URL $PROJECT_PATH
 
 # Moving downloaded po files to the project
 mv -v $PLUGIN_PO_FILES_PATH* $PROJECT_PATH$PROJECT_PO_FILES_PATH
@@ -22,4 +22,4 @@ mv -v $PLUGIN_PO_FILES_PATH* $PROJECT_PATH$PROJECT_PO_FILES_PATH
 cd $PROJECT_PATH
 git add $PROJECT_PO_FILES_PATH
 git commit -m "po file update - $(date)"
-git push origin develop
+git push -v origin develop
