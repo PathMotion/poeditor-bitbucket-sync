@@ -22,4 +22,4 @@ mv -v $PLUGIN_PO_FILES_PATH* $PROJECT_PATH$PROJECT_PO_FILES_PATH
 cd $PROJECT_PATH
 git add $PROJECT_PO_FILES_PATH
 git commit -m "po file update - $(date)"
-git push origin master
+git push origin develop
